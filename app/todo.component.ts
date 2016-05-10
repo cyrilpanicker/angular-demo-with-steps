@@ -1,5 +1,7 @@
 import {Todo} from './todo.model';
 import {Component} from '@angular/core';
+import {RouteParams} from '@angular/router-deprecated';
+import {TodoService} from './todo.service';
 
 @Component({
     selector:'todo',
@@ -18,4 +20,8 @@ import {Component} from '@angular/core';
 
 export class TodoComponent{
     todo:Todo;
+    constructor(
+        private todoService:TodoService,
+        private routeParams:RouteParams
+    ){}
 }

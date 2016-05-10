@@ -9,15 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_deprecated_1 = require('@angular/router-deprecated');
+var todo_service_1 = require('./todo.service');
 var TodoComponent = (function () {
-    function TodoComponent() {
+    function TodoComponent(todoService, routeParams) {
+        this.todoService = todoService;
+        this.routeParams = routeParams;
     }
     TodoComponent = __decorate([
         core_1.Component({
             selector: 'todo',
             template: "\n        <h2>\n            {{todo.text}} - \n            <span [hidden]=\"todo.complete\" >pending</span>\n            <span [hidden]=\"!todo.complete\" >complete</span>\n        </h2>\n        <div>\n            Text : <input [(ngModel)]=\"todo.text\" /><br/>\n            Complete : <input type=\"checkbox\" [(ngModel)]=\"todo.complete\"  />\n        </div>\n    "
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [todo_service_1.TodoService, router_deprecated_1.RouteParams])
     ], TodoComponent);
     return TodoComponent;
 }());
