@@ -1,0 +1,5 @@
+1 - setup
+2 - todo.model added
+3 - todo.component added
+4 - component metadata added for todo.component
+5 - app bootstraped
