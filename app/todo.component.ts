@@ -10,7 +10,7 @@ import {Component} from '@angular/core';
             <span [hidden]="!todo.complete" >complete</span>
         </h2>
         <div>
-            Text : <input [ngModel]="todo.text" /><br/>
+            Text : <input [ngModel]="todo.text" (keyup)="updateText($event.target.value)" /><br/>
             Complete : <input type="checkbox" [ngModel]="todo.complete" (change)="toggleTodo()" />
         </div>
     `
@@ -24,5 +24,8 @@ export class TodoComponent{
     }
     toggleTodo(){
         this.todo.complete = !this.todo.complete;
+    }
+    updateText(text:string){
+        this.todo.text = text;
     }
 }

@@ -6,3 +6,4 @@
 6 - demo for code to template binding
 7 - changed to ngModel directive
 8 - added toggleTodo
+9 - added updateText
