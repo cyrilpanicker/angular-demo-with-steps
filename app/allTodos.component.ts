@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component,OnInit} from '@angular/core';
 import {Todo} from './todo.model';
 import {TodoComponent} from './todo.component';
 import {TodoService} from './todo.service';
@@ -30,12 +30,14 @@ import {TodoService} from './todo.service';
         <todo [todo]="selectedTodo" ></todo>
     `
 })
-export class AllTodosComponent{
+export class AllTodosComponent implements OnInit {
     todos:Todo[];
     selectedTodo:Todo;
     private todoService:TodoService;
     constructor(todoService:TodoService){
         this.todoService = todoService;
+    }
+    ngOnInit(){
         this.todos = this.todoService.getTodos();
         this.selectedTodo = this.todos[0];
     }

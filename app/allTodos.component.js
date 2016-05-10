@@ -14,9 +14,11 @@ var todo_service_1 = require('./todo.service');
 var AllTodosComponent = (function () {
     function AllTodosComponent(todoService) {
         this.todoService = todoService;
+    }
+    AllTodosComponent.prototype.ngOnInit = function () {
         this.todos = this.todoService.getTodos();
         this.selectedTodo = this.todos[0];
-    }
+    };
     AllTodosComponent.prototype.toggleTodo = function (todo) {
         todo.complete = !todo.complete;
     };
