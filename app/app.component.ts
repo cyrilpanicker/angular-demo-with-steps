@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {RouteConfig} from '@angular/router-deprecated';
 import {AllTodosComponent} from './allTodos.component';
-import {PendingComponent} from './pendingTodos.component';1
+import {PendingComponent} from './pendingTodos.component';
 
 @Component({
     selector:'app',
