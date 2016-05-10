@@ -10,6 +10,8 @@ import {TodoService} from './todo.service';
     directives:[ROUTER_DIRECTIVES],
     template:`
         <h2>Todo App</h2>
+        <a [routerLink]="['AllTodos']" >All</a> 
+        <a [routerLink]="['PendingTodos']" >Pending</a>
         <router-outlet></router-outlet>
     `
 })
