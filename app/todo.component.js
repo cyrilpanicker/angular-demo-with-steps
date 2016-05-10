@@ -26,7 +26,7 @@ var TodoComponent = (function () {
     TodoComponent = __decorate([
         core_1.Component({
             selector: 'todo',
-            template: "\n        <h2>\n            {{todo.text}} - \n            <span [hidden]=\"todo.complete\" >pending</span>\n            <span [hidden]=\"!todo.complete\" >complete</span>\n        </h2>\n        <div>\n            Text : <input #inputTextBox [ngModel]=\"todo.text\" (ngModelChange)=\"updateText(inputTextBox.value)\" /><br/>\n            Complete : <input type=\"checkbox\" [ngModel]=\"todo.complete\" (ngModelChange)=\"toggleTodo()\" />\n        </div>\n    "
+            template: "\n        <h2>\n            {{todo.text}} - \n            <span [hidden]=\"todo.complete\" >pending</span>\n            <span [hidden]=\"!todo.complete\" >complete</span>\n        </h2>\n        <div>\n            Text : <input [ngModel]=\"todo.text\" (ngModelChange)=\"updateText($event)\" /><br/>\n            Complete : <input type=\"checkbox\" [ngModel]=\"todo.complete\" (ngModelChange)=\"toggleTodo()\" />\n        </div>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], TodoComponent);
