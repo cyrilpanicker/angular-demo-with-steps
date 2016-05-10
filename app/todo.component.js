@@ -14,6 +14,10 @@ var TodoComponent = (function () {
     function TodoComponent() {
         this.toggle = new core_1.EventEmitter();
     }
+    TodoComponent.prototype.toggleTodo = function (complete) {
+        this.todo.complete = complete;
+        this.toggle.emit({});
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', todo_model_1.Todo)
@@ -25,7 +29,7 @@ var TodoComponent = (function () {
     TodoComponent = __decorate([
         core_1.Component({
             selector: 'todo',
-            template: "\n        <h2>\n            {{todo.text}} - \n            <span [hidden]=\"todo.complete\" >pending</span>\n            <span [hidden]=\"!todo.complete\" >complete</span>\n        </h2>\n        <div>\n            Text : <input [(ngModel)]=\"todo.text\" /><br/>\n            Complete : <input type=\"checkbox\" [(ngModel)]=\"todo.complete\" />\n        </div>\n    "
+            template: "\n        <h2>\n            {{todo.text}} - \n            <span [hidden]=\"todo.complete\" >pending</span>\n            <span [hidden]=\"!todo.complete\" >complete</span>\n        </h2>\n        <div>\n            Text : <input [(ngModel)]=\"todo.text\" /><br/>\n            Complete : <input type=\"checkbox\" [ngModel]=\"todo.complete\" (ngModelChange)=\"toggleTodo($event)\" />\n        </div>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], TodoComponent);

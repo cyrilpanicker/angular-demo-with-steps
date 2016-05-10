@@ -11,7 +11,7 @@ import {Component,Input,Output,EventEmitter} from '@angular/core';
         </h2>
         <div>
             Text : <input [(ngModel)]="todo.text" /><br/>
-            Complete : <input type="checkbox" [(ngModel)]="todo.complete" />
+            Complete : <input type="checkbox" [ngModel]="todo.complete" (ngModelChange)="toggleTodo($event)" />
         </div>
     `
 })
@@ -19,4 +19,8 @@ import {Component,Input,Output,EventEmitter} from '@angular/core';
 export class TodoComponent{
     @Input() todo:Todo;
     @Output() toggle = new EventEmitter();
+    toggleTodo(complete){
+        this.todo.complete = complete;
+        this.toggle.emit({});
+    }
 }
