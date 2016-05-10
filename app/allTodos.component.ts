@@ -1,8 +1,10 @@
 import {Component} from '@angular/core';
 import {Todo} from './todo.model';
+import {TodoComponent} from './todo.component';
 
 @Component({
     selector:'all-todos',
+    directives:[TodoComponent],
     styles:[`
         li.complete span{
             text-decoration: line-through;
@@ -22,6 +24,7 @@ import {Todo} from './todo.model';
                 <span>{{todo.text}}</span>
             </li>
         </ul>
+        <todo [todo]="selectedTodo" ></todo>
     `
 })
 export class AllTodosComponent{
