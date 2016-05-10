@@ -1,10 +1,12 @@
 import {Component} from '@angular/core';
 import {Todo} from './todo.model';
 import {TodoComponent} from './todo.component';
+import {TodoService} from './todo.service';
 
 @Component({
     selector:'all-todos',
     directives:[TodoComponent],
+    providers:[TodoService],
     styles:[`
         li.complete span{
             text-decoration: line-through;
@@ -29,17 +31,14 @@ import {TodoComponent} from './todo.component';
     `
 })
 export class AllTodosComponent{
-    todos:Todo[]=[
-        {id:1,text:'abc',complete:false},
-        {id:2,text:'def',complete:false},
-        {id:3,text:'ghi',complete:false},
-        {id:4,text:'jkl',complete:false},
-        {id:5,text:'mno',complete:false},
-        {id:6,text:'pqr',complete:false},
-        {id:7,text:'stu',complete:false},
-        {id:8,text:'vwx',complete:false}
-    ];
-    selectedTodo = this.todos[0];
+    todos:Todo[];
+    selectedTodo:Todo;
+    private todoService:TodoService;
+    constructor(todoService:TodoService){
+        this.todoService = todoService;
+        this.todos = this.todoService.getTodos();
+        this.selectedTodo = this.todos[0];
+    }
     toggleTodo(todo:Todo){
         todo.complete = !todo.complete;
     }

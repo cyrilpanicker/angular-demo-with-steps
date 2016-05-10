@@ -10,18 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var todo_component_1 = require('./todo.component');
+var todo_service_1 = require('./todo.service');
 var AllTodosComponent = (function () {
-    function AllTodosComponent() {
-        this.todos = [
-            { id: 1, text: 'abc', complete: false },
-            { id: 2, text: 'def', complete: false },
-            { id: 3, text: 'ghi', complete: false },
-            { id: 4, text: 'jkl', complete: false },
-            { id: 5, text: 'mno', complete: false },
-            { id: 6, text: 'pqr', complete: false },
-            { id: 7, text: 'stu', complete: false },
-            { id: 8, text: 'vwx', complete: false }
-        ];
+    function AllTodosComponent(todoService) {
+        this.todoService = todoService;
+        this.todos = this.todoService.getTodos();
         this.selectedTodo = this.todos[0];
     }
     AllTodosComponent.prototype.toggleTodo = function (todo) {
@@ -34,10 +27,11 @@ var AllTodosComponent = (function () {
         core_1.Component({
             selector: 'all-todos',
             directives: [todo_component_1.TodoComponent],
+            providers: [todo_service_1.TodoService],
             styles: ["\n        li.complete span{\n            text-decoration: line-through;\n        }\n        li{\n            cursor:pointer;\n        }\n    "],
             template: "\n        <h2>All Todos</h2>\n        <ul>\n            <li\n                *ngFor=\"let todo of todos\"\n                (click)=\"toggleTodo(todo)\"\n                [class.complete]=\"todo.complete\"\n            >\n                <span>{{todo.text}}</span>\n                <button (click)=\"selectTodo(todo);$event.stopPropagation();\" >Select</button>\n            </li>\n        </ul>\n        <todo [todo]=\"selectedTodo\" ></todo>\n    "
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [todo_service_1.TodoService])
     ], AllTodosComponent);
     return AllTodosComponent;
 }());
