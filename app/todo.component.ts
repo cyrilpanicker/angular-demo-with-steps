@@ -1,5 +1,5 @@
 import {Todo} from './todo.model';
-import {Component,Input,Output,EventEmitter} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
     selector:'todo',
@@ -11,16 +11,11 @@ import {Component,Input,Output,EventEmitter} from '@angular/core';
         </h2>
         <div>
             Text : <input [(ngModel)]="todo.text" /><br/>
-            Complete : <input type="checkbox" [ngModel]="todo.complete" (ngModelChange)="toggleTodo($event)" />
+            Complete : <input type="checkbox" [(ngModel)]="todo.complete"  />
         </div>
     `
 })
 
 export class TodoComponent{
-    @Input() todo:Todo;
-    @Output() toggle = new EventEmitter();
-    toggleTodo(complete){
-        this.todo.complete = complete;
-        this.toggle.emit({});
-    }
+    todo:Todo;
 }
