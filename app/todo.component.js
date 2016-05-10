@@ -22,10 +22,13 @@ var TodoComponent = (function () {
             return todo.id === parseInt(_this.routeParams.get('id'));
         });
     };
+    TodoComponent.prototype.goBack = function () {
+        window.history.back();
+    };
     TodoComponent = __decorate([
         core_1.Component({
             selector: 'todo',
-            template: "\n        <h2>\n            {{todo.text}} - \n            <span [hidden]=\"todo.complete\" >pending</span>\n            <span [hidden]=\"!todo.complete\" >complete</span>\n        </h2>\n        <div>\n            Text : <input [(ngModel)]=\"todo.text\" /><br/>\n            Complete : <input type=\"checkbox\" [(ngModel)]=\"todo.complete\"  />\n        </div>\n    "
+            template: "\n        <h2>\n            {{todo.text}} - \n            <span [hidden]=\"todo.complete\" >pending</span>\n            <span [hidden]=\"!todo.complete\" >complete</span>\n        </h2>\n        <div>\n            Text : <input [(ngModel)]=\"todo.text\" /><br/>\n            Complete : <input type=\"checkbox\" [(ngModel)]=\"todo.complete\"  />\n        </div>\n        <button (click)=\"goBack()\" >Back</button>\n    "
         }), 
         __metadata('design:paramtypes', [todo_service_1.TodoService, router_deprecated_1.RouteParams])
     ], TodoComponent);

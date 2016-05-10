@@ -15,6 +15,7 @@ import {TodoService} from './todo.service';
             Text : <input [(ngModel)]="todo.text" /><br/>
             Complete : <input type="checkbox" [(ngModel)]="todo.complete"  />
         </div>
+        <button (click)="goBack()" >Back</button>
     `
 })
 
@@ -28,5 +29,8 @@ export class TodoComponent implements OnInit {
         this.todo = this.todoService.getTodos().find(todo=>{
             return todo.id === parseInt(this.routeParams.get('id'));
         });
+    }
+    goBack(){
+        window.history.back();
     }
 }
