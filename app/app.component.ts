@@ -26,7 +26,7 @@ import {TodoComponent} from './todo.component';
 })
 @RouteConfig([
     {name:'AllTodos',path:'alltodos',component:AllTodosComponent,useAsDefault:true},
-    {name:'PendingTodos',path:'pendingtodos',component:PendingComponent}
+    {name:'PendingTodos',path:'pendingtodos',component:PendingComponent},
     {name:'Todo',path:'todo/:id',component:TodoComponent}
 ])
 export class AppComponent{

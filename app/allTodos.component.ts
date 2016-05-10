@@ -1,4 +1,5 @@
 import {Component,OnInit} from '@angular/core';
+import {Router} from '@angular/router-deprecated'
 import {Todo} from './todo.model';
 import {TodoComponent} from './todo.component';
 import {TodoService} from './todo.service';
@@ -30,9 +31,10 @@ import {TodoService} from './todo.service';
 })
 export class AllTodosComponent implements OnInit {
     todos:Todo[];
-    constructor(private todoService:TodoService){
-        
-    }
+    constructor(
+        private todoService:TodoService,
+        private router:Router
+    ){}
     ngOnInit(){
         this.todos = this.todoService.getTodos();
     }
@@ -40,6 +42,6 @@ export class AllTodosComponent implements OnInit {
         todo.complete = !todo.complete;
     }
     selectTodo(todo:Todo){
-
+        this.router.navigate(['Todo',{id:todo.id}]);
     }
 }
