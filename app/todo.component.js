@@ -8,15 +8,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var todo_model_1 = require('./todo.model');
 var core_1 = require('@angular/core');
 var TodoComponent = (function () {
     function TodoComponent() {
-        this.todo = {
-            id: 1,
-            text: 'todo1',
-            complete: false
-        };
     }
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', todo_model_1.Todo)
+    ], TodoComponent.prototype, "todo", void 0);
     TodoComponent = __decorate([
         core_1.Component({
             selector: 'todo',

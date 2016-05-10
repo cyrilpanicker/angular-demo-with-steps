@@ -11,3 +11,4 @@
 11 - replaced host event with ngModelChange
 12 - removed methods
 13 - added [(ngModel)]
+14 - converted to reusable component

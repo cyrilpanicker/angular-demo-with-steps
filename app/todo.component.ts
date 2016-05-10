@@ -1,5 +1,5 @@
 import {Todo} from './todo.model';
-import {Component} from '@angular/core';
+import {Component,Input} from '@angular/core';
 
 @Component({
     selector:'todo',
@@ -17,9 +17,5 @@ import {Component} from '@angular/core';
 })
 
 export class TodoComponent{
-    todo:Todo={
-        id:1,
-        text:'todo1',
-        complete:false
-    }
+    @Input() todo:Todo;
 }
