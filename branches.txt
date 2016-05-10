@@ -23,3 +23,4 @@
 23 - added lifecycle method
 24 - added constructor shorthand
 25 - added PendingTodosComponent
+26 - added eventEmitter to todoCOmponent

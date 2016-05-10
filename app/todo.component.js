@@ -12,11 +12,16 @@ var todo_model_1 = require('./todo.model');
 var core_1 = require('@angular/core');
 var TodoComponent = (function () {
     function TodoComponent() {
+        this.toggle = new core_1.EventEmitter();
     }
     __decorate([
         core_1.Input(), 
         __metadata('design:type', todo_model_1.Todo)
     ], TodoComponent.prototype, "todo", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', Object)
+    ], TodoComponent.prototype, "toggle", void 0);
     TodoComponent = __decorate([
         core_1.Component({
             selector: 'todo',
