@@ -27,3 +27,4 @@
 27 - split ngModel
 28 - added AppComponent
 29 - added routeCOnfig
+30 - added routerDirectives

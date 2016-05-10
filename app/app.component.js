@@ -18,7 +18,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'app',
-            template: "\n        <h2>Todo App</h2>\n    "
+            directives: [router_deprecated_1.ROUTER_DIRECTIVES],
+            template: "\n        <h2>Todo App</h2>\n        <router-outlet></router-outlet>\n    "
         }),
         router_deprecated_1.RouteConfig([
             { name: 'AllTodos', path: 'alltodos', component: allTodos_component_1.AllTodosComponent, useAsDefault: true },
