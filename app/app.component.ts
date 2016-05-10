@@ -8,6 +8,14 @@ import {TodoService} from './todo.service';
     selector:'app',
     providers:[ROUTER_PROVIDERS,TodoService],
     directives:[ROUTER_DIRECTIVES],
+    styles:[`
+        a{
+            color:black;
+        }
+        a.router-link-active{
+            color:blue;
+        }
+    `],
     template:`
         <h2>Todo App</h2>
         <a [routerLink]="['AllTodos']" >All</a> 

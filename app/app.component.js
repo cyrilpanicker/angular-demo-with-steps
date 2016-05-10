@@ -21,6 +21,7 @@ var AppComponent = (function () {
             selector: 'app',
             providers: [router_deprecated_1.ROUTER_PROVIDERS, todo_service_1.TodoService],
             directives: [router_deprecated_1.ROUTER_DIRECTIVES],
+            styles: ["\n        a{\n            color:black;\n        }\n        a.router-link-active{\n            color:blue;\n        }\n    "],
             template: "\n        <h2>Todo App</h2>\n        <a [routerLink]=\"['AllTodos']\" >All</a> \n        <a [routerLink]=\"['PendingTodos']\" >Pending</a>\n        <router-outlet></router-outlet>\n    "
         }),
         router_deprecated_1.RouteConfig([
