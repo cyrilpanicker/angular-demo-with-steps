@@ -11,18 +11,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var TodoComponent = (function () {
     function TodoComponent() {
-        var _this = this;
         this.todo = {
             id: 1,
             text: 'todo1',
             complete: false
         };
-        setTimeout(function () { return _this.todo.text = 'todo2'; }, 3000);
     }
     TodoComponent = __decorate([
         core_1.Component({
             selector: 'todo',
-            template: "\n        <h2>\n            {{todo.text}} - \n            <span [hidden]=\"todo.complete\" >pending</span>\n            <span [hidden]=\"!todo.complete\" >complete</span>\n        </h2>\n        <div>\n            Text : <input [value]=\"todo.text\" /><br/>\n            Complete : <input type=\"checkbox\" [checked]=\"todo.complete\" />\n        </div>\n    "
+            template: "\n        <h2>\n            {{todo.text}} - \n            <span [hidden]=\"todo.complete\" >pending</span>\n            <span [hidden]=\"!todo.complete\" >complete</span>\n        </h2>\n        <div>\n            Text : <input [ngModel]=\"todo.text\" /><br/>\n            Complete : <input type=\"checkbox\" [ngModel]=\"todo.complete\" />\n        </div>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], TodoComponent);

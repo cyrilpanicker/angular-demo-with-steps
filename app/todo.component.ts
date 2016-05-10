@@ -10,8 +10,8 @@ import {Component} from '@angular/core';
             <span [hidden]="!todo.complete" >complete</span>
         </h2>
         <div>
-            Text : <input [value]="todo.text" /><br/>
-            Complete : <input type="checkbox" [checked]="todo.complete" />
+            Text : <input [ngModel]="todo.text" /><br/>
+            Complete : <input type="checkbox" [ngModel]="todo.complete" />
         </div>
     `
 })
@@ -21,8 +21,5 @@ export class TodoComponent{
         id:1,
         text:'todo1',
         complete:false
-    }
-    constructor(){
-        setTimeout(()=>this.todo.text='todo2',3000);
     }
 }
