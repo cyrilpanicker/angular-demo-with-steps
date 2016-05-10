@@ -13,6 +13,7 @@ var router_deprecated_1 = require('@angular/router-deprecated');
 var allTodos_component_1 = require('./allTodos.component');
 var pendingTodos_component_1 = require('./pendingTodos.component');
 var todo_service_1 = require('./todo.service');
+var todo_component_1 = require('./todo.component');
 var AppComponent = (function () {
     function AppComponent() {
     }
@@ -26,7 +27,8 @@ var AppComponent = (function () {
         }),
         router_deprecated_1.RouteConfig([
             { name: 'AllTodos', path: 'alltodos', component: allTodos_component_1.AllTodosComponent, useAsDefault: true },
-            { name: 'PendingTodos', path: 'pendingtodos', component: pendingTodos_component_1.PendingComponent }
+            { name: 'PendingTodos', path: 'pendingtodos', component: pendingTodos_component_1.PendingComponent },
+            { name: 'Todo', path: 'todo/:id', component: todo_component_1.TodoComponent }
         ]), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

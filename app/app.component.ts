@@ -3,6 +3,7 @@ import {RouteConfig,ROUTER_DIRECTIVES,ROUTER_PROVIDERS} from '@angular/router-de
 import {AllTodosComponent} from './allTodos.component';
 import {PendingComponent} from './pendingTodos.component';
 import {TodoService} from './todo.service';
+import {TodoComponent} from './todo.component';
 
 @Component({
     selector:'app',
@@ -26,6 +27,7 @@ import {TodoService} from './todo.service';
 @RouteConfig([
     {name:'AllTodos',path:'alltodos',component:AllTodosComponent,useAsDefault:true},
     {name:'PendingTodos',path:'pendingtodos',component:PendingComponent}
+    {name:'Todo',path:'todo/:id',component:TodoComponent}
 ])
 export class AppComponent{
     
