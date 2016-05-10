@@ -12,3 +12,4 @@
 12 - removed methods
 13 - added [(ngModel)]
 14 - converted to reusable component
+15 - AllTodosComponent
