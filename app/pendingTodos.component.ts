@@ -22,7 +22,6 @@ import {TodoService} from './todo.service';
                 <button (click)="selectTodo(todo);$event.stopPropagation();" >Select</button>
             </li>
         </ul>
-        <todo [todo]="selectedTodo" (toggle)="updateTodos()" ></todo>
     `
 })
 export class PendingComponent implements OnInit {
