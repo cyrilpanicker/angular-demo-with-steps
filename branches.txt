@@ -3,3 +3,4 @@
 3 - todo.component added
 4 - component metadata added for todo.component
 5 - app bootstraped
+6 - demo for code to template binding
