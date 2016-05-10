@@ -32,7 +32,7 @@ var AllTodosComponent = (function () {
     AllTodosComponent = __decorate([
         core_1.Component({
             selector: 'all-todos',
-            template: "\n        <h2>All Todos</h2>\n        <ul>\n            <li *ngFor=\"let todo of todos\">\n                <span>{{todo.text}}</span>\n            </li>\n        </ul>\n    "
+            template: "\n        <h2>All Todos</h2>\n        <ul>\n            <li\n                *ngFor=\"let todo of todos\"\n                (click)=\"toggleTodo(todo)\"\n                [class.complete]=\"todo.complete\"\n            >\n                <span>{{todo.text}}</span>\n            </li>\n        </ul>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], AllTodosComponent);

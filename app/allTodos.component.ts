@@ -6,7 +6,11 @@ import {Todo} from './todo.model';
     template:`
         <h2>All Todos</h2>
         <ul>
-            <li *ngFor="let todo of todos">
+            <li
+                *ngFor="let todo of todos"
+                (click)="toggleTodo(todo)"
+                [class.complete]="todo.complete"
+            >
                 <span>{{todo.text}}</span>
             </li>
         </ul>

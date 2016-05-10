@@ -14,3 +14,4 @@
 14 - converted to reusable component
 15 - AllTodosComponent added
 16 - added template for AllTodosComponent and bootstraped the same
+17 - added toggleTodo handler
