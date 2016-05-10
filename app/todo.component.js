@@ -11,11 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var TodoComponent = (function () {
     function TodoComponent() {
+        var _this = this;
         this.todo = {
             id: 1,
             text: 'todo1',
             complete: false
         };
+        setTimeout(function () { return _this.todo.text = 'todo2'; }, 3000);
     }
     TodoComponent = __decorate([
         core_1.Component({

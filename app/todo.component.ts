@@ -22,4 +22,7 @@ export class TodoComponent{
         text:'todo1',
         complete:false
     }
+    constructor(){
+        setTimeout(()=>this.todo.text='todo2',3000);
+    }
 }
