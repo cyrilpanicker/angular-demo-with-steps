@@ -21,3 +21,4 @@
 21 - added service
 22 - injected service
 23 - added lifecycle method
+24 - added constructor shorthand

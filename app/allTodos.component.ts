@@ -33,9 +33,8 @@ import {TodoService} from './todo.service';
 export class AllTodosComponent implements OnInit {
     todos:Todo[];
     selectedTodo:Todo;
-    private todoService:TodoService;
-    constructor(todoService:TodoService){
-        this.todoService = todoService;
+    constructor(private todoService:TodoService){
+        
     }
     ngOnInit(){
         this.todos = this.todoService.getTodos();
