@@ -16,6 +16,12 @@ var TodoComponent = (function () {
         this.todoService = todoService;
         this.routeParams = routeParams;
     }
+    TodoComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.todo = this.todoService.getTodos().find(function (todo) {
+            return todo.id === parseInt(_this.routeParams.get('id'));
+        });
+    };
     TodoComponent = __decorate([
         core_1.Component({
             selector: 'todo',

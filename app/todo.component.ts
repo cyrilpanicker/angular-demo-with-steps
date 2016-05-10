@@ -1,5 +1,5 @@
 import {Todo} from './todo.model';
-import {Component} from '@angular/core';
+import {Component,OnInit} from '@angular/core';
 import {RouteParams} from '@angular/router-deprecated';
 import {TodoService} from './todo.service';
 
@@ -18,10 +18,15 @@ import {TodoService} from './todo.service';
     `
 })
 
-export class TodoComponent{
+export class TodoComponent implements OnInit {
     todo:Todo;
     constructor(
         private todoService:TodoService,
         private routeParams:RouteParams
     ){}
+    ngOnInit(){
+        this.todo = this.todoService.getTodos().find(todo=>{
+            return todo.id === parseInt(this.routeParams.get('id'));
+        });
+    }
 }

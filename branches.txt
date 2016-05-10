@@ -33,3 +33,4 @@
 33 - added routerlink styles
 34 - modified TodoCOmponent
 35 - routeParams added
+36 - added logic to get todo
