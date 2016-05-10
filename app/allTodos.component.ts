@@ -3,6 +3,14 @@ import {Todo} from './todo.model';
 
 @Component({
     selector:'all-todos',
+    styles:[`
+        li.complete span{
+            text-decoration: line-through;
+        }
+        li{
+            cursor:pointer;
+        }
+    `],
     template:`
         <h2>All Todos</h2>
         <ul>

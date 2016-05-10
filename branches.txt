@@ -15,3 +15,4 @@
 15 - AllTodosComponent added
 16 - added template for AllTodosComponent and bootstraped the same
 17 - added toggleTodo handler
+18 - styles added
