@@ -1,5 +1,17 @@
+import {Component} from '@angular/core';
 import {Todo} from './todo.model';
 
+@Component({
+    selector:'all-todos',
+    template:`
+        <h2>All Todos</h2>
+        <ul>
+            <li *ngFor="let todo of todos">
+                <span>{{todo.text}}</span>
+            </li>
+        </ul>
+    `
+})
 export class AllTodosComponent{
     todos:Todo[]=[
         {id:1,text:'abc',complete:false},

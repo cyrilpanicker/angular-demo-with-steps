@@ -1,5 +1,5 @@
 "use strict";
 var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
-var todo_component_1 = require('./todo.component');
-platform_browser_dynamic_1.bootstrap(todo_component_1.TodoComponent);
+var allTodos_component_1 = require('./allTodos.component');
+platform_browser_dynamic_1.bootstrap(allTodos_component_1.AllTodosComponent);
 //# sourceMappingURL=main.js.map
