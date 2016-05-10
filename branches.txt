@@ -17,3 +17,4 @@
 17 - added toggleTodo handler
 18 - styles added
 19 - resused todoComponent
+20 - added select button

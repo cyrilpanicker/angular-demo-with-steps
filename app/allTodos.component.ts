@@ -22,6 +22,7 @@ import {TodoComponent} from './todo.component';
                 [class.complete]="todo.complete"
             >
                 <span>{{todo.text}}</span>
+                <button (click)="selectTodo(todo);$event.stopPropagation();" >Select</button>
             </li>
         </ul>
         <todo [todo]="selectedTodo" ></todo>
