@@ -17,10 +17,13 @@ var TodoComponent = (function () {
             complete: false
         };
     }
+    TodoComponent.prototype.toggleTodo = function () {
+        this.todo.complete = !this.todo.complete;
+    };
     TodoComponent = __decorate([
         core_1.Component({
             selector: 'todo',
-            template: "\n        <h2>\n            {{todo.text}} - \n            <span [hidden]=\"todo.complete\" >pending</span>\n            <span [hidden]=\"!todo.complete\" >complete</span>\n        </h2>\n        <div>\n            Text : <input [ngModel]=\"todo.text\" /><br/>\n            Complete : <input type=\"checkbox\" [ngModel]=\"todo.complete\" />\n        </div>\n    "
+            template: "\n        <h2>\n            {{todo.text}} - \n            <span [hidden]=\"todo.complete\" >pending</span>\n            <span [hidden]=\"!todo.complete\" >complete</span>\n        </h2>\n        <div>\n            Text : <input [ngModel]=\"todo.text\" /><br/>\n            Complete : <input type=\"checkbox\" [ngModel]=\"todo.complete\" (change)=\"toggleTodo()\" />\n        </div>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], TodoComponent);

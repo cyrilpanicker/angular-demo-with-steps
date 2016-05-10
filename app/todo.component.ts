@@ -11,7 +11,7 @@ import {Component} from '@angular/core';
         </h2>
         <div>
             Text : <input [ngModel]="todo.text" /><br/>
-            Complete : <input type="checkbox" [ngModel]="todo.complete" />
+            Complete : <input type="checkbox" [ngModel]="todo.complete" (change)="toggleTodo()" />
         </div>
     `
 })
@@ -21,5 +21,8 @@ export class TodoComponent{
         id:1,
         text:'todo1',
         complete:false
+    }
+    toggleTodo(){
+        this.todo.complete = !this.todo.complete;
     }
 }
