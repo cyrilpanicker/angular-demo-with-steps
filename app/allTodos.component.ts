@@ -26,23 +26,20 @@ import {TodoService} from './todo.service';
                 <button (click)="selectTodo(todo);$event.stopPropagation();" >Select</button>
             </li>
         </ul>
-        <todo [todo]="selectedTodo" ></todo>
     `
 })
 export class AllTodosComponent implements OnInit {
     todos:Todo[];
-    selectedTodo:Todo;
     constructor(private todoService:TodoService){
         
     }
     ngOnInit(){
         this.todos = this.todoService.getTodos();
-        this.selectedTodo = this.todos[0];
     }
     toggleTodo(todo:Todo){
         todo.complete = !todo.complete;
     }
     selectTodo(todo:Todo){
-        this.selectedTodo = todo;
+
     }
 }

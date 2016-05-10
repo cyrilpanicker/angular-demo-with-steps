@@ -20,14 +20,12 @@ var PendingComponent = (function () {
     };
     PendingComponent.prototype.ngOnInit = function () {
         this.updateTodos();
-        this.selectedTodo = this.todos[0];
     };
     PendingComponent.prototype.toggleTodo = function (todo) {
         todo.complete = !todo.complete;
         this.updateTodos();
     };
     PendingComponent.prototype.selectTodo = function (todo) {
-        this.selectedTodo = todo;
     };
     PendingComponent = __decorate([
         core_1.Component({

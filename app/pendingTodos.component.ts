@@ -27,7 +27,6 @@ import {TodoService} from './todo.service';
 })
 export class PendingComponent implements OnInit {
     todos:Todo[];
-    selectedTodo:Todo;
     constructor(private todoService:TodoService){
 
     }
@@ -36,13 +35,12 @@ export class PendingComponent implements OnInit {
     }
     ngOnInit(){
         this.updateTodos();
-        this.selectedTodo = this.todos[0];
     }
     toggleTodo(todo:Todo){
         todo.complete = !todo.complete;
         this.updateTodos();
     }
     selectTodo(todo:Todo){
-        this.selectedTodo = todo;
+        
     }
 }
