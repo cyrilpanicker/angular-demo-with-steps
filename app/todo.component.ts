@@ -10,7 +10,7 @@ import {Component} from '@angular/core';
             <span [hidden]="!todo.complete" >complete</span>
         </h2>
         <div>
-            Text : <input [ngModel]="todo.text" (keyup)="updateText($event.target.value)" /><br/>
+            Text : <input #inputTextBox [ngModel]="todo.text" (keyup)="updateText(inputTextBox.value)" /><br/>
             Complete : <input type="checkbox" [ngModel]="todo.complete" (change)="toggleTodo()" />
         </div>
     `

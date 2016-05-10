@@ -7,3 +7,4 @@
 7 - changed to ngModel directive
 8 - added toggleTodo
 9 - added updateText
+10 - added inputTextBox template variable
