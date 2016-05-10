@@ -10,3 +10,4 @@
 10 - added inputTextBox template variable
 11 - replaced host event with ngModelChange
 12 - removed methods
+13 - added [(ngModel)]
