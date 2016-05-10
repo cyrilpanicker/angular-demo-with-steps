@@ -25,3 +25,4 @@
 25 - added PendingTodosComponent
 26 - added eventEmitter to todoCOmponent
 27 - split ngModel
+28 - added AppComponent

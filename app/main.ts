@@ -1,4 +1,4 @@
 import {bootstrap} from '@angular/platform-browser-dynamic';
-import {PendingComponent} from './pendingTodos.component';
+import {AppComponent} from './app.component';
 
-bootstrap(PendingComponent);
+bootstrap(AppComponent);
