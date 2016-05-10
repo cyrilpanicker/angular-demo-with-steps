@@ -28,3 +28,4 @@
 28 - added AppComponent
 29 - added routeCOnfig
 30 - added routerDirectives
+31 - added router providers

@@ -6,7 +6,6 @@ import {TodoService} from './todo.service';
 @Component({
     selector:'pending-todos',
     directives:[TodoComponent],
-    providers:[TodoService],
     styles:[`
         li{
             cursor:pointer;

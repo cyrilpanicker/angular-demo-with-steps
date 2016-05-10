@@ -12,12 +12,14 @@ var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
 var allTodos_component_1 = require('./allTodos.component');
 var pendingTodos_component_1 = require('./pendingTodos.component');
+var todo_service_1 = require('./todo.service');
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'app',
+            providers: [router_deprecated_1.ROUTER_PROVIDERS, todo_service_1.TodoService],
             directives: [router_deprecated_1.ROUTER_DIRECTIVES],
             template: "\n        <h2>Todo App</h2>\n        <router-outlet></router-outlet>\n    "
         }),

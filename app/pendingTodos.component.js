@@ -33,7 +33,6 @@ var PendingComponent = (function () {
         core_1.Component({
             selector: 'pending-todos',
             directives: [todo_component_1.TodoComponent],
-            providers: [todo_service_1.TodoService],
             styles: ["\n        li{\n            cursor:pointer;\n        }\n    "],
             template: "\n        <h2>Pending Todos</h2>\n        <ul>\n            <li\n                *ngFor=\"let todo of todos\"\n                (click)=\"toggleTodo(todo)\"\n            >\n                <span>{{todo.text}}</span>\n                <button (click)=\"selectTodo(todo);$event.stopPropagation();\" >Select</button>\n            </li>\n        </ul>\n        <todo [todo]=\"selectedTodo\" (toggle)=\"updateTodos()\" ></todo>\n    "
         }), 

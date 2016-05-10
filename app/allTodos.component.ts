@@ -6,7 +6,6 @@ import {TodoService} from './todo.service';
 @Component({
     selector:'all-todos',
     directives:[TodoComponent],
-    providers:[TodoService],
     styles:[`
         li.complete span{
             text-decoration: line-through;
