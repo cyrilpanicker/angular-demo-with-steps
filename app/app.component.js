@@ -12,7 +12,6 @@ var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
 var allTodos_component_1 = require('./allTodos.component');
 var pendingTodos_component_1 = require('./pendingTodos.component');
-1;
 var AppComponent = (function () {
     function AppComponent() {
     }
